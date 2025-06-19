@@ -1,6 +1,6 @@
 # ⚙️ Configuration
 
-[**`templates/configs/config.yml`**](https://github.com/bybatkhuu/module.python-template/blob/main/templates/configs/config.yml):
+[**`templates/configs/config.yml`**](https://github.com/bybatkhuu/docs.mkdocs-template/blob/main/templates/configs/config.yml):
 
 ```yaml
 my_module01:
@@ -13,7 +13,7 @@ my_module01:
 
 ## 🌎 Environment Variables
 
-[**`.env.example`**](https://github.com/bybatkhuu/module.python-template/blob/main/.env.example):
+[**`.env.example`**](https://github.com/bybatkhuu/docs.mkdocs-template/blob/main/.env.example):
 
 ```sh
 # ENV=development
