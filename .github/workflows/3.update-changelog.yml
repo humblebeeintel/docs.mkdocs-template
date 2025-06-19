@@ -2,7 +2,7 @@ name: 3. Update Changelog
 
 on:
   workflow_run:
-    workflows: ["2. Build and Publish"]
+    workflows: ["2. Create Release"]
     types:
       - completed
 

@@ -1,6 +1,6 @@
-site_name: My Module
+site_name: MkDocs Documentation Template
 site_description: "This is a template module for python projects."
-site_url: https://bybatkhuu.github.io/module.python-template
+site_url: https://mkdocs-docs.bybatkhuu.dev
 repo_name: bybatkhuu/module.python-template
 repo_url: https://github.com/bybatkhuu/module.python-template
 theme:
@@ -58,7 +58,11 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -83,16 +87,15 @@ nav:
       - Error codes: pages/getting-started/error-codes.md
   - API Documentation:
       # - pages/api-docs/README.md
-      - Diagrams: pages/api-docs/diagrams.md
+      - MyClass: pages/api-docs/MyClass.md
+      - MyClassConfigPM: pages/api-docs/MyClassConfigPM.md
   - Development:
       # - pages/dev/README.md
       - Test: pages/dev/test.md
       - Build: pages/dev/build.md
       - Docs: pages/dev/docs.md
-      - CI/CD: pages/dev/cicd.md
       - Scripts:
           - pages/dev/scripts/README.md
-          - base.sh: pages/dev/scripts/1.base.md
           - clean.sh: pages/dev/scripts/2.clean.md
           - get-version.sh: pages/dev/scripts/3.get-version.md
           - test.sh: pages/dev/scripts/4.test.md
@@ -101,6 +104,13 @@ nav:
           - changelog.sh: pages/dev/scripts/7.changelog.md
           - docs.sh: pages/dev/scripts/8.docs.md
           - diagrams.sh: pages/dev/scripts/9.diagrams.md
+      - CI/CD:
+          - pages/dev/cicd/README.md
+          - 1.bump-version.yml: pages/dev/cicd/1.bump-version.md
+          - 2.build-publish.yml: pages/dev/cicd/2.build-publish.md
+          - 3.update-changelog.yml: pages/dev/cicd/3.update-changelog.md
+          - publish-docs.yml: pages/dev/cicd/publish-docs.md
+      - Diagrams: pages/dev/diagrams.md
       - File stucture: pages/dev/file-structure.md
       - Sitemap: pages/dev/sitemap.md
       - Related projects: pages/dev/related-projects.md
