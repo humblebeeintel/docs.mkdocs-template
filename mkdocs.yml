@@ -1,6 +1,6 @@
 site_name: MkDocs Documentation Template
 site_description: "This is a template repository for documentation, wiki, knowledge base and technical blog using 'Material for MkDocs'."
-site_url: https://mkdocs-docs.bybatkhuu.dev
+site_url: https://mkdocs.bybatkhuu.dev
 repo_name: bybatkhuu/docs.mkdocs-template
 repo_url: https://github.com/bybatkhuu/docs.mkdocs-template
 theme:
