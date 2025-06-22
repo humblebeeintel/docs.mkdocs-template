@@ -123,6 +123,9 @@ mkdocs gh-deploy
 - <https://squidfunk.github.io/mkdocs-material/getting-started>
 - <https://www.mkdocs.org>
 - <https://pypi.org/project/mkdocs-material>
+- <https://github.com/mkdocs/catalog>
 - <https://mkdocstrings.github.io>
+- <https://lukasgeiter.github.io/mkdocs-awesome-nav>
+- <https://oprypin.github.io/mkdocs-literate-nav>
 - <https://github.com/bharel/mkdocs-render-swagger-plugin>
-- <https://github.com/blueswen/mkdocs-swagger-ui-tag>
+- <https://blueswen.github.io/mkdocs-swagger-ui-tag>
