@@ -1,4 +1,5 @@
 ---
+title: Release Notes
 hide:
   - navigation
 #   - toc
@@ -6,6 +7,6 @@ hide:
 
 # 📌 Release Notes
 
-## v0.0.1 (2024-01-01)
+## v0.0.1 (2025-01-01)
 
 - Initial release

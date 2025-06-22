@@ -4,38 +4,20 @@ hide:
 #   - toc
 ---
 
-# Introduction
+# Welcome to MkDocs
 
-This is a template repository for python module projects.
+For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## ✨ Features
+## Commands
 
-- Python module/package
-- Project Structure
-- Boilerplate/Template
-- Best Practices
-- Configuration
-- Test
-- Build
-- Documentation
-- Scripts
-- Examples
-- CI/CD
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs -h` - Print help message and exit.
 
-## 🧩 Template
+## Project layout
 
-- You can use this template repository as reference to create a new repository with the same structure or clone the repository to start a new project. It will help you to organize your project structure and files. It works out of the box for most of the AI/ML projects.
-- You can customize (remove, modify or add) the files and directories as needed to meet your project requirements.
-- If you want to use the template repository directly, just click the **[Use this template](https://github.com/new?template_name=docs.mkdocs-template&template_owner=bybatkhuu)** button and follow the instructions.
-- You can use **cookiecutter** to generate a new project from **[cookiecutter](https://github.com/bybatkhuu/docs.mkdocs-template/tree/cookiecutter)** branch:
-
-    ```sh
-    # Clone the cookiecutter branch:
-    git clone -b cookiecutter https://github.com/bybatkhuu/docs.mkdocs-template.git
-
-    # Install cookiecutter:
-    pip install cookiecutter
-
-    # Generate a new project from the cookiecutter template:
-    cookiecutter -f ./docs.mkdocs-template
-    ```
+    mkdocs.yml    # The configuration file.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Other markdown pages, images and other files.
