@@ -1,8 +1,8 @@
-site_name: MkDocs Template
-site_description: "This is a template repository for documentation, wiki, knowledge base and technical blog using 'Material for MkDocs'."
-site_url: https://mkdocs.bybatkhuu.dev
-repo_name: bybatkhuu/docs.mkdocs-template
-repo_url: https://github.com/bybatkhuu/docs.mkdocs-template
+site_name: {{cookiecutter.project_name}}
+site_description: "{{cookiecutter.project_description}}"
+site_url: https://{{cookiecutter.domain}}
+repo_name: {{cookiecutter.repo_owner}}/{{cookiecutter.repo_name}}
+repo_url: https://github.com/{{cookiecutter.repo_owner}}/{{cookiecutter.repo_name}}
 theme:
   name: material
   # name: readthedocs
