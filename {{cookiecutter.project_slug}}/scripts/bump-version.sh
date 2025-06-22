@@ -8,7 +8,6 @@ _SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 _PROJECT_DIR="$(cd "${_SCRIPT_DIR}/.." >/dev/null 2>&1 && pwd)"
 cd "${_PROJECT_DIR}" || exit 2
 
-
 # Loading .env file (if exists):
 if [ -f ".env" ]; then
 	# shellcheck disable=SC1091
@@ -19,7 +18,7 @@ fi
 
 ## --- Variables --- ##
 # Load from envrionment variables:
-VERSION_FILE_PATH="${VERSION_FILE_PATH:-./VERSION.txt}"
+VERSION_FILE_PATH="${VERSION_FILE_PATH:-VERSION.txt}"
 
 
 _BUMP_TYPE=""
@@ -51,7 +50,7 @@ main()
 					_IS_PUSH=true
 					shift;;
 				*)
-					echo "[ERROR]: Failed to parsing input -> ${_input}"
+					echo "[ERROR]: Failed to parse input -> ${_input}"
 					echo "[INFO]: USAGE: ${0}  -b=*, --bump-type=* [major | minor | patch] | -c, --commit | -t, --tag | -p, --push"
 					exit 1;;
 			esac
@@ -61,12 +60,12 @@ main()
 
 
 	if [ -z "${_BUMP_TYPE:-}" ]; then
-		echo "[ERROR]: Bump type is empty! Use '-b=' or '--bump-type=' argument."
+		echo "[ERROR]: Bump type is empty! Use '-b=' or '--bump-type=' argument!"
 		exit 1
 	fi
 
 	if [ "${_BUMP_TYPE}" != "major" ] && [ "${_BUMP_TYPE}" != "minor" ] && [ "${_BUMP_TYPE}" != "patch" ]; then
-		echo "Bump type '${_BUMP_TYPE}' is invalid, should be: 'major', 'minor' or 'patch'!"
+		echo "[INFO]: Bump type '${_BUMP_TYPE}' is invalid, should be: 'major', 'minor' or 'patch'!"
 		exit 1
 	fi
 
@@ -112,7 +111,7 @@ main()
 		if [ "${_IS_TAG}" == true ]; then
 			echo "[INFO]: Tagging 'v${_new_version}'..."
 			if git rev-parse "v${_new_version}" > /dev/null 2>&1; then
-				echo "[ERROR]: 'v${_new_version}' tag is already exists."
+				echo "[ERROR]: 'v${_new_version}' tag is already exists!"
 				exit 1
 			fi
 			git tag "v${_new_version}" || exit 2

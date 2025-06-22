@@ -20,5 +20,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Create release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
         run: gh release create v$(./scripts/get-version.sh) --generate-notes
