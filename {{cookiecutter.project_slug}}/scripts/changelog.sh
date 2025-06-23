@@ -30,7 +30,7 @@ fi
 ## --- Variables --- ##
 # Load from envrionment variables:
 CHANGELOG_FILE_PATH="${CHANGELOG_FILE_PATH:-./CHANGELOG.md}"
-
+RELEASE_NOTES_FILE_PATH="${RELEASE_NOTES_FILE_PATH:-./docs/release-notes.md}"
 
 # Flags:
 _IS_COMMIT=false
@@ -69,22 +69,35 @@ main()
 	fi
 
 
-	echo "[INFO]: Updating changelog..."
-	_title="# Changelog"
+	_changelog_title="# Changelog"
 	_release_tag=$(gh release view --json tagName -q ".tagName")
 	_release_notes=$(gh release view --json body -q ".body")
+	_release_entry="## ${_release_tag} ($(date '+%Y-%m-%d'))\n\n${_release_notes}"
 
-	if ! grep -q "^${_title}" "${CHANGELOG_FILE_PATH}"; then
-		echo -e "${_title}\n\n" > "${CHANGELOG_FILE_PATH}"
+	echo "[INFO]: Updating changelog..."
+	if ! grep -q "^${_changelog_title}" "${CHANGELOG_FILE_PATH}"; then
+		echo -e "${_changelog_title}\n\n" > "${CHANGELOG_FILE_PATH}"
 	fi
 
-	# shellcheck disable=SC2086
-	echo -e "${_title}\n\n## ${_release_tag} ($(date '+%Y-%m-%d'))\n\n${_release_notes}\n\n$(tail -n +3 ${CHANGELOG_FILE_PATH})" > "${CHANGELOG_FILE_PATH}"
+	_tail_changelog=$(tail -n +3 "${CHANGELOG_FILE_PATH}")
+	echo -e "${_changelog_title}\n\n${_release_entry}\n\n${_tail_changelog}" > "${CHANGELOG_FILE_PATH}"
 	echo "[OK]: Updated changelog version: '${_release_tag}'"
+
+
+	echo "[INFO]: Updating release notes..."
+	_release_notes_header="---\ntitle: Release Notes\nhide:\n  - navigation\n---\n\n# 📌 Release Notes"
+	if ! grep -q "^# 📌 Release Notes" "${RELEASE_NOTES_FILE_PATH}"; then
+		echo -e "${_release_notes_header}\n\n" > "${RELEASE_NOTES_FILE_PATH}"
+	fi
+
+	_tail_notes=$(tail -n +9 "${RELEASE_NOTES_FILE_PATH}")
+	echo -e "${_release_notes_header}\n\n${_release_entry}\n\n${_tail_notes}" > "${RELEASE_NOTES_FILE_PATH}"
+	echo "[OK]: Updated release notes with version: '${_release_tag}'"
 
 	if [ "${_IS_COMMIT}" == true ]; then
 		echo "[INFO]: Committing changelog version '${_release_tag}'..."
 		git add "${CHANGELOG_FILE_PATH}" || exit 2
+		git add "${RELEASE_NOTES_FILE_PATH}" || exit 2
 		git commit -m ":memo: Update changelog version '${_release_tag}'." || exit 2
 		echo "[OK]: Done."
 
