@@ -59,7 +59,11 @@ main()
 		mkdocs serve
 	elif [ "${_IS_PUBLISH}" == true ]; then
 		echo "[INFO]: Publishing documentation pages to the GitHub Pages..."
-		mkdocs gh-deploy --force
+		# mkdocs gh-deploy --force
+
+		_major_minor_version="$(./scripts/get-version.sh | cut -d. -f1-2)"
+		mike deploy --push --update-aliases "${_major_minor_version}" latest
+		mike set-default --push latest
 	else
 		echo "[INFO]: Building documentation pages (HTML) into the 'site' directory..."
 		mkdocs build
