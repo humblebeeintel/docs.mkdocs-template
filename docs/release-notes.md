@@ -6,6 +6,14 @@ hide:
 
 # 📌 Release Notes
 
+## v1.1.0-250624 (2025-06-24)
+
+<!-- Release notes generated using configuration in .github/release.yml at v1.1.0-250624 -->
+
+
+
+**Full Changelog**: https://github.com/bybatkhuu/docs.mkdocs-template/compare/v1.0.1-250624...v1.1.0-250624
+
 ## v1.0.1-250624 (2025-06-24)
 
 <!-- Release notes generated using configuration in .github/release.yml at v1.0.1-250624 -->
