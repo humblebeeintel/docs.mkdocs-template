@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.0.1-250624 (2025-06-24)
+
+<!-- Release notes generated using configuration in .github/release.yml at v1.0.1-250624 -->
+
+## What's Changed
+### ✨ Features
+* :sparkles: Enhance MkDocs configuration and update deployment script by @bybatkhuu in https://github.com/bybatkhuu/docs.mkdocs-template/pull/5
+
+
+**Full Changelog**: https://github.com/bybatkhuu/docs.mkdocs-template/compare/v1.0.0-250622...v1.0.1-250624
+
 ## v1.0.0-250622 (2025-06-22)
 
 <!-- Release notes generated using configuration in .github/release.yml at v1.0.0-250622 -->
