@@ -15,15 +15,9 @@
 - MkDocs Material
 - Wiki/Knowledge base
 - Technical blog
+- Documentation
 - Markdown support
 - Static site generator
-- Project Structure
-- Boilerplate/Template
-- Best Practices
-- Configuration
-- Documentation
-- Scripts
-- CI/CD
 
 ---
 
@@ -111,7 +105,7 @@ ls -al ./site
 cp -r ./site/* /var/www/docs.example.com/public
 # Or use rsync:
 rsync -av --delete ./site/ /var/www/blog.humblebee.ai/public/
-Add commentMore actions
+
 # Or deploy the documentation to GitHub Pages (default branch: gh-pages) of this repository:
 mkdocs gh-deploy
 # Or use mike with versioning:
