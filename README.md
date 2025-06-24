@@ -124,7 +124,7 @@ ls -al ./site
 # Copy the generated HTML files to the web server:
 cp -r ./site/* /var/www/docs.example.com/public
 # Or use rsync:
-rsync -av --delete ./site/ /var/www/blog.humblebee.ai/public/
+rsync -av --delete ./site/ /var/www/docs.example.com/public/
 
 # Or deploy the documentation to GitHub Pages (default branch: gh-pages) of this repository:
 mkdocs gh-deploy
