@@ -11,13 +11,13 @@ This is a template repository for documentation, wiki, knowledge base and techni
 - MkDocs Material
 - Wiki/Knowledge base
 - Technical blog
+- Documentation
 - Markdown support
 - Static site generator
 - Project Structure
 - Boilerplate/Template
 - Best Practices
 - Configuration
-- Documentation
 - Scripts
 - CI/CD
 
