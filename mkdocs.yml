@@ -72,9 +72,6 @@ markdown_extensions:
 extra_javascript:
   - assets/js/mathjax.js
   - assets/js/tex-mml-chtml.js
-extra:
-  version:
-    provider: mike
 plugins:
   - search
   - tags
@@ -88,3 +85,6 @@ plugins:
       archive_date_format: yyyy/MM
       archive_url_date_format: yyyy/MM
       blog_toc: true
+extra:
+  version:
+    provider: mike
