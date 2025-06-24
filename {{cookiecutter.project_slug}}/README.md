@@ -108,9 +108,16 @@ ls -al ./site
 
 ```sh
 # Copy the generated HTML files to the web server:
-cp -r ./site/* /var/www/{{cookiecutter.domain}}/public
-# Or deploy the documentation to GitHub Pages (branch: gh-pages) of the current repository:
+cp -r ./site/* /var/www/docs.example.com/public
+# Or use rsync:
+rsync -av --delete ./site/ /var/www/blog.humblebee.ai/public/
+Add commentMore actions
+# Or deploy the documentation to GitHub Pages (default branch: gh-pages) of this repository:
 mkdocs gh-deploy
+# Or use mike with versioning:
+_major_minor_version="$(./scripts/get-version.sh | cut -d. -f1-2)"
+mike deploy -p -u ${_major_minor_version} latest
+mike set-default -p latest
 ```
 
 👍
@@ -124,6 +131,7 @@ mkdocs gh-deploy
 - <https://www.mkdocs.org>
 - <https://pypi.org/project/mkdocs-material>
 - <https://github.com/mkdocs/catalog>
+- <https://github.com/jimporter/mike>
 - <https://mkdocstrings.github.io>
 - <https://lukasgeiter.github.io/mkdocs-awesome-nav>
 - <https://oprypin.github.io/mkdocs-literate-nav>
