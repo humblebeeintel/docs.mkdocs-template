@@ -19,5 +19,11 @@
 		"ISC License",
 		"Proprietary License",
 		"No License"
+	],
+	"_copy_without_render": [
+		".github/workflows/1.bump-version.yml",
+		".github/workflows/2.create-release.yml",
+		".github/workflows/3.update-changelog.yml",
+		"docs/assets/js/*.js"
 	]
 }
