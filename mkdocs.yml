@@ -52,12 +52,13 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 markdown_extensions:
+  - md_in_html
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -66,6 +67,14 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - assets/js/mathjax.js
+  - assets/js/tex-mml-chtml.js
+extra:
+  version:
+    provider: mike
 plugins:
   - search
   - tags
@@ -79,6 +88,3 @@ plugins:
       archive_date_format: yyyy/MM
       archive_url_date_format: yyyy/MM
       blog_toc: true
-extra:
-  version:
-    provider: mike
