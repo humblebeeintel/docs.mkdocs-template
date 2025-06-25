@@ -58,14 +58,7 @@ main()
 		fi
 	fi
 
-	if [ "${_IS_PUBLISH}" == false ]; then
-		echo "[INFO]: Building documentation pages (HTML) into the 'site' directory..."
-		mkdocs build
-
-		# _major_minor_version="$(./scripts/get-version.sh | cut -d. -f1-2)"
-		# mike deploy -u "${_major_minor_version}" latest
-		# mike set-default latest
-	else
+	if [ "${_IS_PUBLISH}" == true ]; then
 		echo "[INFO]: Publishing documentation pages to the GitHub Pages..."
 		# mkdocs gh-deploy --force
 
@@ -76,6 +69,13 @@ main()
 		if [ "${_IS_CLEAN}" == true ]; then
 			./scripts/clean.sh || exit 2
 		fi
+	else
+		echo "[INFO]: Building documentation pages (HTML) into the 'site' directory..."
+		mkdocs build
+
+		# _major_minor_version="$(./scripts/get-version.sh | cut -d. -f1-2)"
+		# mike deploy -u "${_major_minor_version}" latest
+		# mike set-default latest
 	fi
 	echo "[OK]: Done."
 }
