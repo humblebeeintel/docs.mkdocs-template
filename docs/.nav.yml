@@ -4,3 +4,4 @@ nav:
       - getting-started.md
   - "*"
   - Blog: blog/
+  - Release Notes: release-notes.md
