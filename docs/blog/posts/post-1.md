@@ -2,11 +2,14 @@
 date:
     created: 2025-01-01T01:00:00
     updated: 2025-01-31T01:00:00
+authors:
+  - bybatkhuu
 categories:
   - Category-1
 tags:
   - Tag-1
-readtime: 3
+  - Tag-2
+# readtime: 3
 ---
 
 # Post 1
