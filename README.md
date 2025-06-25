@@ -112,7 +112,7 @@ mkdocs serve -a 0.0.0.0:8000
 ```sh
 mkdocs build
 # Or:
-./scripts/docs.sh -b
+./scripts/build.sh
 
 # Check the generated HTML files (it should be in the `site` directory):
 ls -al ./site
@@ -127,11 +127,13 @@ cp -r ./site/* /var/www/docs.example.com/public
 rsync -av --delete ./site/ /var/www/docs.example.com/public/
 
 # Or deploy the documentation to GitHub Pages (default branch: gh-pages) of this repository:
-mkdocs gh-deploy
+mkdocs gh-deploy --force
 # Or use mike with versioning:
 _major_minor_version="$(./scripts/get-version.sh | cut -d. -f1-2)"
 mike deploy -p -u ${_major_minor_version} latest
 mike set-default -p latest
+# Or:
+./scripts/build.sh -p
 ```
 
 👍
