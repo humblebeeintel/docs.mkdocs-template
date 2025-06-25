@@ -101,7 +101,7 @@ plugins:
       #   - Tools
       #   - Tutorials
       #   - Tips
-      #   - Samples
+      #   - Examples
       #   - Others
 extra:
   version:
