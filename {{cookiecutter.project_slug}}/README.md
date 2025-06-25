@@ -5,7 +5,7 @@
 {% elif cookiecutter.license == "GNU GPLv3" %}[![GPLv3 License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://choosealicense.com/licenses/gpl-3.0)
 {% elif cookiecutter.license == "BSD License" %}[![BSD License](https://img.shields.io/badge/License-BSD-blue.svg)](https://choosealicense.com/licenses/bsd-3-clause-clear)
 {% elif cookiecutter.license == "ISC License" %}[![ISC License](https://img.shields.io/badge/License-ISC-blue.svg)](https://choosealicense.com/licenses/isc)
-{% endif %}{% if cookiecutter.license != "Proprietary License" %}[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.repo_owner}}/{{cookiecutter.repo_name}}/2.create-release.yml?logo=GitHub)](https://github.com/{{cookiecutter.repo_owner}}/{{cookiecutter.repo_name}}/actions/workflows/2.create-release.yml)
+{% endif %}{% if cookiecutter.license != "Proprietary License" %}[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/{{cookiecutter.repo_owner}}/{{cookiecutter.repo_name}}/4.publish-docs.yml?logo=GitHub)](https://github.com/{{cookiecutter.repo_owner}}/{{cookiecutter.repo_name}}/actions/workflows/4.publish-docs.yml)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/{{cookiecutter.repo_owner}}/{{cookiecutter.repo_name}}?logo=GitHub&color=blue)](https://github.com/{{cookiecutter.repo_owner}}/{{cookiecutter.repo_name}}/releases)
 
 {% endif %}{{cookiecutter.project_description}}
@@ -92,7 +92,7 @@ mkdocs serve -a 0.0.0.0:8000
 ```sh
 mkdocs build
 # Or:
-./scripts/docs.sh -b
+./scripts/build.sh
 
 # Check the generated HTML files (it should be in the `site` directory):
 ls -al ./site
@@ -107,11 +107,13 @@ cp -r ./site/* /var/www/{{cookiecutter.domain}}/public
 rsync -av --delete ./site/ /var/www/{{cookiecutter.domain}}/public/
 
 # Or deploy the documentation to GitHub Pages (default branch: gh-pages) of this repository:
-mkdocs gh-deploy
+mkdocs gh-deploy --force
 # Or use mike with versioning:
 _major_minor_version="$(./scripts/get-version.sh | cut -d. -f1-2)"
 mike deploy -p -u ${_major_minor_version} latest
 mike set-default -p latest
+# Or:
+./scripts/build.sh -p
 ```
 
 👍
