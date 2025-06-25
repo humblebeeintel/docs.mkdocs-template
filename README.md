@@ -1,7 +1,7 @@
 # MkDocs Material Template
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bybatkhuu/docs.mkdocs-template/4.publish-docs?logo=GitHub)](https://github.com/bybatkhuu/docs.mkdocs-template/actions/workflows/4.publish-docs)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bybatkhuu/docs.mkdocs-template/4.publish-docs.yml?logo=GitHub)](https://github.com/bybatkhuu/docs.mkdocs-template/actions/workflows/4.publish-docs.yml)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/bybatkhuu/docs.mkdocs-template?logo=GitHub&color=blue)](https://github.com/bybatkhuu/docs.mkdocs-template/releases)
 
 This is a template repository for documentation, wiki, knowledge base and technical blog using **Material for MkDocs**.
