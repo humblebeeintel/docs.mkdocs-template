@@ -23,4 +23,4 @@ jobs:
       - name: Create release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create v$(./scripts/get-version.sh) --generate-notes
+        run: ./scripts/release.sh
