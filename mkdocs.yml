@@ -121,3 +121,15 @@ plugins:
 extra:
   version:
     provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bybatkhuu
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/bybatkhuu
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/user/bybatkhuu
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/bybatkhuu
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/bybatkhuu
+copyright: Copyright &copy; 2025 Batkhuu Byambajav
