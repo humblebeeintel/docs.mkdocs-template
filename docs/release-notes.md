@@ -6,6 +6,19 @@ hide:
 
 # 📌 Release Notes
 
+## v1.2.0-250824 (2025-08-24)
+
+<!-- Release notes generated using configuration in .github/release.yml at v1.2.0-250824 -->
+
+## What's Changed
+### ✨ Features
+* Add metadata, improve documentation, and update CI configurations by @bybatkhuu in https://github.com/bybatkhuu/docs.mkdocs-template/pull/7
+### 👷 CI/CD
+* :hammer::green_heart: Refactor release process by creating a new scri… by @bybatkhuu in https://github.com/bybatkhuu/docs.mkdocs-template/pull/6
+
+
+**Full Changelog**: https://github.com/bybatkhuu/docs.mkdocs-template/compare/v1.1.0-250624...v1.2.0-250824
+
 ## v1.1.0-250624 (2025-06-24)
 
 <!-- Release notes generated using configuration in .github/release.yml at v1.1.0-250624 -->
