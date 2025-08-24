@@ -6,10 +6,11 @@ authors:
   - bybatkhuu
 categories:
   - Category-1
+  - Category-2
 tags:
   - Tag-1
   - Tag-2
-# readtime: 3
+readtime: 3
 ---
 
 # Post 1

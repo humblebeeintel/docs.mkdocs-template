@@ -1,4 +1,5 @@
 ---
+title: "Getting Started"
 hide:
   - navigation
 #   - toc

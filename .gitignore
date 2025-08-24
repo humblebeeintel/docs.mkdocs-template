@@ -126,7 +126,8 @@ ipython_config.py
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -494,7 +495,6 @@ data/
 dataset/
 datasets/
 .benchmarks/
-docs.mkdocs-template/
 
 # Files:
 log
@@ -505,7 +505,6 @@ data
 dataset
 datasets
 .benchmarks
-docs.mkdocs-template
 *.bak
 version.py
 sample.py
