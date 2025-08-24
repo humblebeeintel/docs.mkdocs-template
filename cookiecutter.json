@@ -3,6 +3,7 @@
 	"project_slug": "docs.mkdocs-template",
 	"project_description": "This is a short description of the project.",
 	"domain": "docs.example.com",
+	"docs_domain": "docs.{{cookiecutter.domain}}",
 	"author_username": "username",
 	"author_fullname": "Full Name",
 	"repo_owner": "{{cookiecutter.author_username}}",
