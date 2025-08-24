@@ -121,3 +121,15 @@ plugins:
 extra:
   version:
     provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/{{cookiecutter.repo_owner}}
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/{{cookiecutter.repo_owner}}
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/user/{{cookiecutter.repo_owner}}
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/{{cookiecutter.repo_owner}}
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/{{cookiecutter.repo_owner}}
+copyright: Copyright &copy; 2025 {{cookiecutter.repo_owner}}
