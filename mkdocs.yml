@@ -24,6 +24,7 @@ theme:
     # - navigation.tabs.sticky
     # - navigation.sections
     # - navigation.expand
+    # - navigation.instant
     - toc.follow
     # - toc.integrate
     - search.suggest
@@ -52,21 +53,38 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
   - md_in_html
+  - footnotes
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.blocks.caption
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
 extra_javascript:
@@ -76,15 +94,12 @@ plugins:
   - meta
   - tags
   - search
-  - mkdocstrings
   - awesome-nav
-  # - literate-nav
+  - mkdocstrings
   - blog:
-      blog_dir: blog
-      post_excerpt: required
+      # post_excerpt: required
       post_excerpt_max_authors: 3
       post_date_format: medium
-      post_url_format: "{date}/{slug}"
       archive_date_format: yyyy/MM
       archive_url_date_format: yyyy/MM
       blog_toc: true

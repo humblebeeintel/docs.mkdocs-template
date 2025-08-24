@@ -21,7 +21,7 @@ if [ -z "$(which gh)" ]; then
 fi
 
 if ! gh auth status >/dev/null 2>&1; then
-    echo "[ERROR]: You need to login: 'gh auth login'"
+    echo "[ERROR]: You need to login: 'gh auth login'!"
     exit 1
 fi
 ## --- Base --- ##
@@ -52,7 +52,7 @@ main()
 					_IS_PUSH=true
 					shift;;
 				*)
-					echo "[ERROR]: Failed to parse input -> ${_input}"
+					echo "[ERROR]: Failed to parse input -> ${_input}!"
 					echo "[INFO]: USAGE: ${0}  -c, --commit | -p, --push"
 					exit 1;;
 			esac
