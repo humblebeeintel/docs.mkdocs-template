@@ -2,5 +2,5 @@ authors:
   {{cookiecutter.author_username}}:
     name: {{cookiecutter.author_fullname}}
     description: Creator, maintainer
-    # avatar: https://avatars.githubusercontent.com/u/AVATAR_ID
+    avatar: https://avatars.githubusercontent.com/{{cookiecutter.author_username}}
     url: https://github.com/{{cookiecutter.author_username}}

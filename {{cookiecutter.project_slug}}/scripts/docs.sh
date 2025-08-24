@@ -17,12 +17,12 @@ fi
 
 
 if [ -z "$(which mkdocs)" ]; then
-	echo "[ERROR]: 'mkdocs' not found or not installed."
+	echo "[ERROR]: 'mkdocs' not found or not installed!"
 	exit 1
 fi
 
 # if [ -z "$(which mike)" ]; then
-# 	echo "[ERROR]: 'mike' not found or not installed."
+# 	echo "[ERROR]: 'mike' not found or not installed!"
 # 	exit 1
 # fi
 ## --- Base --- ##
