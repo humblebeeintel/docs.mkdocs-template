@@ -97,6 +97,7 @@ plugins:
   - search
   - awesome-nav
   - mkdocstrings
+  - include-markdown
   - blog:
       # post_excerpt: required
       post_excerpt_max_authors: 3
