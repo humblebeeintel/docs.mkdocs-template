@@ -133,4 +133,4 @@ extra:
       link: https://x.com/{{cookiecutter.repo_owner}}
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/{{cookiecutter.repo_owner}}
-copyright: Copyright &copy; 2025 {{cookiecutter.repo_owner}}
+copyright: Copyright &copy; 2025 - {{cookiecutter.repo_owner}}
